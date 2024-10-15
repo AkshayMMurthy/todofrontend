@@ -9,7 +9,7 @@ const TodoForm = ({ addTodo }) => {
       const newTodo = { title };
       
       // Send POST request to backend
-      const res = await fetch('http://localhost:5000/api/todos', {
+      const res = await fetch('https://todobackend-htch.onrender.com/api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
