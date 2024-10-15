@@ -1,0 +1,216 @@
+/* src/index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* src/index.css - Add responsive design at the end */
+
+
+/* src/TodoList.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-right: 250px;
+  padding-bottom: 200px;
+}
+
+.app-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 200%;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+input[type="text"] {
+  width: 82%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px; 
+  font-size: 1rem;
+  
+  
+  
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 2px;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Todo List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+li:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+li:hover {
+  background-color: #eaf0f7;
+}
+
+span {
+  color: #333;
+  flex-grow: 1;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Input styling when editing todo */
+input.todo-edit-input {
+  padding: 8px;
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Save button styling */
+button.save-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+button.save-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Update button styling */
+button.update-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+button.update-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Delete button styling */
+button.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+button.delete-btn:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+    width: 90%;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  button.delete-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
