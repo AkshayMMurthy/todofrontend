@@ -8,7 +8,7 @@ const App = () => {
 
   // Fetch todos from backend
   useEffect(() => {
-    fetch('http://localhost:5000/api/todos')
+    fetch('https://todobackend-htch.onrender.com/api/todos')
       .then((res) => res.json())
       .then((data) => setTodos(data))
       .catch((err) => console.error(err));
@@ -19,7 +19,7 @@ const App = () => {
   };
 
   const deleteTodo = async (id) => {
-    await fetch(`http://localhost:5000/api/todos/${id}`, {
+    await fetch(`https://todobackend-htch.onrender.com/api/todos/${id}`, {
       method: 'DELETE',
     });
     setTodos(todos.filter((todo) => todo._id !== id));
@@ -27,7 +27,7 @@ const App = () => {
 
   const updateTodo = async (id, updatedTitle) => {
     // Call the update API
-    await fetch(`http://localhost:5000/api/todos/${id}`, {
+    await fetch(`https://todobackend-htch.onrender.com/api/todos/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
